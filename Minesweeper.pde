@@ -15,7 +15,13 @@ void setup ()
     
     //your code to initialize buttons goes here
     
-    
+    buttons = new MSButton[NUM_ROWS][NUM)COLS];
+    for(int r = 0; r < NUM_ROWS.length; r++){
+        for(int c = 0; c < NUMS_COLS.length; c++){
+        buttons[r][c]= new MSButton(r,c);
+        }
+    }
+
     
     setMines();
 }
@@ -63,8 +69,8 @@ public class MSButton
     
     public MSButton ( int row, int col )
     {
-        // width = 400/NUM_COLS;
-        // height = 400/NUM_ROWS;
+        width = 400/NUM_COLS;
+        height = 400/NUM_ROWS;
         myRow = row;
         myCol = col; 
         x = myCol*width;
